@@ -6,6 +6,7 @@ cluster quality. This software has been used at the INEX XML Mining track [a]
 and in the MediaEval Social Event Detection task [b].
 
 [a] http://inex.otago.ac.nz/tracks/wiki-mine/wiki-mine.asp
+
 [b] http://www.multimediaeval.org/mediaeval2013/sed2013/
 
 Introduction
@@ -107,23 +108,26 @@ if not specified to the program is the NMI measure. There are options for each
 of the measures as described in the usage. For a complete description and
 analysis of the measures please see De Vries et. al. [1].
 
-Purity measures the fraction of each cluster that is the majority class label
+*Purity* measures the fraction of each cluster that is the majority class label
 in the ground truth. Purity ignores class labels that are not the majority. All
 the following measures do not.
 
-Entropy and Negentropy combine probabilities for each class label in the ground
-truth that exist in a cluster using the entropy measure. The probability for a
-class label is the fraction of the clusters that is the given class label.  F1
-compares each pair of documents to and combines them using the harmonic mean.
+*Entropy* and *Negentropy* combine probabilities for each class label in the
+ground truth that exist in a cluster using the entropy measure. The probability
+for a class label is the fraction of the clusters that is the given class
+label.
 
-The Old F1 measure transforms the clustering into a classification using the
+*F1* compares each pair of documents to and combines them using the harmonic
+mean.
+
+The *Old F1* measure transforms the clustering into a classification using the
 majority class label from the ground truth. This measure was used in the 2009
 and 2010 INEX XML Mining track.
 
-NMI compares the ground truth and clustering in an information theoretic sense
+*NMI* compares the ground truth and clustering in an information theoretic sense
 that makes a trade-off between the number of clusters and quality.
 
-Divergence from a Random Baseline augments any measure of cluster quality to
+*Divergence from a Random Baseline* augments any measure of cluster quality to
 account for ineffective or pathological clusterings. It can differentiate
 clusterings of no use, such as assigning each document to its own cluster. In
 this case the purity score is at its maximum at 1 but when augmented using this
